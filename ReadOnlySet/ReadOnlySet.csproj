@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <Description>ReadOnlySet is a generic read-only set. May be use as a read-only wrap on generic HashSet</Description>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -8,7 +8,7 @@
     <Company>AnamSoft</Company>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <PackageId>AnamSoft.ReadOnlySet</PackageId>
-    <Copyright>AnamSoft</Copyright>
+    <Copyright>Copyright © Alex Broitman 2020</Copyright>
     <RepositoryUrl>https://github.com/AlexBroitman/AnamSoft.ReadOnlySet</RepositoryUrl>
     <Nullable>enable</Nullable>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
