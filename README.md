@@ -1,2 +1,2 @@
 # ReadOnlySet
-![Build](https://github.com/AlexBroitman/AnamSoft.ReadOnlySet/workflows/Master/badge.svg)
+![Build](https://github.com/AlexBroitman/AnamSoft.ReadOnlySet/workflows/BuildMaster/badge.svg)
