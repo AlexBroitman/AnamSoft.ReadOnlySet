@@ -1,0 +1,45 @@
+name: BuildMaster
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    types: [ closed ]
+    branches: [ master ]
+
+jobs:
+  build:
+    name: .NET Core
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macOS-latest, windows-latest]
+    steps:
+    - name: Start
+      run: echo 'Started at ${{ steps.start.outputs.time }}.'
+      id: start
+    - name: Checkout
+      uses: actions/checkout@v2
+      id: co
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.1.101
+      id: setup
+    - name: Install dependencies
+      run: dotnet restore
+      id: restore
+    - name: Build
+      run: dotnet build --configuration Release --no-restore
+      id: build
+    - name: Test
+      run: dotnet test --no-restore --verbosity normal
+      id: test
+    - name: Package Release
+      run: dotnet pack --configuration Release -o out
+    - name: Publish to NuGet
+      run: dotnet nuget push out/ReadOnlySet.1.0.0.nupkg -k ${{secrets.NUGET_API_KEY_DEFAULT}} -s https://api.nuget.org/v3/index.json
+      id: PublishToNuGet
+    - name: Finish
+      run: echo 'Finished at ${{ steps.finish.outputs.time }}.'
+      id: finish
