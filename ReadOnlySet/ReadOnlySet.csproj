@@ -14,5 +14,7 @@
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <RepositoryType>Public</RepositoryType>
     <PackageTags>ReadOnlySet;HashSet</PackageTags>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
 </Project>

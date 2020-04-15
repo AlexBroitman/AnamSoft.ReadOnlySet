@@ -7,7 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReadOnlySet", "ReadOnlySet\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BA0ED0DE-9677-403A-B287-68660A24C8BA}"
 	ProjectSection(SolutionItems) = preProject
+		.github\workflows\BuildMaster.yml = .github\workflows\BuildMaster.yml
 		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GitHubWorkflows", "GitHubWorkflows", "{AE6E4F23-07AC-4F8C-AE11-02CF0EDC103D}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\BuildMaster.yml = .github\workflows\BuildMaster.yml
 	EndProjectSection
 EndProject
 Global
@@ -23,6 +29,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AE6E4F23-07AC-4F8C-AE11-02CF0EDC103D} = {BA0ED0DE-9677-403A-B287-68660A24C8BA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A1CD1F6C-3A86-41F8-ABB2-FB1A03DF8D5B}
